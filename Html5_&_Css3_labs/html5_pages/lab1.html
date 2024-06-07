@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta >
+        <link rel="stylesheet" href="../css3_styles/lab1.css">
+    </head>
+    <body>
+        <div>
+            <video src="../assets/frozen.mp4" id="vdo" width="300px" height="200px" controls></video><br>
+            <progress id="prog" max="100" value="0"></progress>
+            <label for="prog" id="lapl">Sacend</label><br>
+            <button onclick="vdPlay()">play</button>
+            <button onclick="vdPause()">pause</button>
+            <button onclick="setCurTimeStart()"><<</button>
+            <button onclick="setCurTimeMines5()"><</button>
+            <button onclick="setCurTimeAdd5()">></button>
+            <button onclick="setCurTimeEnd()">>></button>
+            <input type="range" name="" id="rng" min="0.0" max="1.0" value="0.5" step="0.1" oninput="VdVolum()">
+            <button onclick="muted()">Muted</button><br>
+            <button>speed</button>
+            <input type="range" name="" id="sped" min="1" max="16" value="10" step="1" onchange="playPack()">
+
+        </div>
+        <hr>
+        <div>
+            Red: <input  type="range" min="0" max="255" value="0" step="10" id="red" oninput="setColor()"/><br>
+            Green: <input  type="range" min="0" max="255" value="0" step="10" id="green" onchange="setColor()"/><br>
+            Blue: <input  type="range" min="0" max="255" value="0" step="10" id="blue" onchange="setColor()"/><br>
+             <br>
+            <div id="colr" width="200px" height="250px">balt</div>
+        </div>
+        <button onclick="rst()">rest</button><br>
+        <hr>
+        <canvas id="myline" width="200" height="200" style="border:2px solid darkorange" onmouseenter="drwlin()">
+
+        </canvas><br>
+        <hr>
+        <svg height="210" width="400" >
+            <path id="txt" d="M150 5 L50 200 L160 200 Z" style="fill:green;stroke:green;stroke-width:3" />
+            <text style="fill:black;font-size:25px;">
+                <textPath href="#txt" startOffset="400">A</textPath>
+                <textPath href="#txt" startOffset="110">B</textPath>
+                <textPath href="#txt" startOffset="280">C</textPath>
+              </text>
+          </svg><br>
+          <hr>
+        <math>
+            <mrow>
+                <mtext>c</mtext>
+                <mo>=</mo>
+                <mrow>
+                    <msqrt>
+                        <msup>
+                            <mi>A</mi>
+                            <mn>2</mn>
+                        </msup>
+                        <mo>+</mo>
+                        <msup>
+                            <mi>B</mi>
+                            <mn>2</mn>
+                        </msup>
+                    </msqrt>
+                </mrow>
+            </mrow>
+        
+        </math><br>
+
+        <script src="../javaScript/lab1.js"></script>
+
+    </body>
+</html>
